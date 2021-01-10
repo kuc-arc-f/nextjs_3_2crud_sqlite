@@ -18,6 +18,25 @@ Next.js + sqlite, CRUD sample
 
 npx create-next-app app1 --use-npm --example "https://github.com/vercel/next-learn-starter/tree/master/learn-starter"
 
+* npm
+
+https://www.npmjs.com/package/sqlite
+
+yarn add sqlite
+
+yarn add sqlite3
+
+***
+* Table
+
+CREATE TABLE tasks(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title VARCHAR(255) NOT NULL,
+  content TEXT,
+  uid INTEGER,
+  up_date TIMESTAMP
+);
+
 ***
 ### start server
 * Start :
