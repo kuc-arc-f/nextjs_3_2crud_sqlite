@@ -13,8 +13,6 @@ export default class extends Component {
     this.database = null
 //console.log(props)
   }
-  componentDidMount(){
-  }   
   handleChangeTitle(e){
     this.setState({title: e.target.value})
   }
@@ -24,11 +22,7 @@ export default class extends Component {
   handleClick(){
     this.add_item()
 //    console.log(this.state)
-//    this.add_auth_check()
-//        console.log( this.state )
   } 
-  add_auth_check(){
-  }
   async add_item(){
     try {
       var item = {
