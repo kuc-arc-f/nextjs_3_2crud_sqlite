@@ -19,7 +19,7 @@ console.log(this.state )
     console.log(ctx.query.id)
     var id = ctx.query.id
 //    var item = {}
-    const res = await fetch('/api/tasks/show?id=' + id)
+    const res = await fetch(process.env.BASE_URL + '/api/tasks/show?id=' + id)
     const json = await res.json()
   // console.log(json)
     var item = json.item    
@@ -47,11 +47,11 @@ console.log(this.state )
         id: this.props.id,
       }
 //console.log(item)
-        const res = await fetch('/api/tasks/delete', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', },
-          body: JSON.stringify(item),
-        });
+      const res = await fetch(process.env.BASE_URL + '/api/tasks/delete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', },
+        body: JSON.stringify(item),
+      });
       if (res.status === 200) {
         Router.push('/tasks');
       } else {
@@ -74,7 +74,7 @@ console.log(this.state )
         id: this.props.id,
       }
 //console.log(item)
-        const res = await fetch('/api/tasks/update', {
+        const res = await fetch(process.env.BASE_URL + '/api/tasks/update', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

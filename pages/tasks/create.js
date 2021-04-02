@@ -30,7 +30,7 @@ export default class extends Component {
         content: this.state.content,
       }
 //console.log(item)
-        const res = await fetch('/api/tasks/new', {
+        const res = await fetch(process.env.BASE_URL + '/api/tasks/new', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

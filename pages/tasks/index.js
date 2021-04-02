@@ -8,7 +8,7 @@ export default class Page extends React.Component {
 console.log(this.props.items )
   }  
   static async getInitialProps(ctx) {
-    const res = await fetch('/api/tasks/list')
+    const res = await fetch(process.env.BASE_URL+ '/api/tasks/list')
     const json = await res.json()
 //console.log(json)
     return { items: json.items  }
