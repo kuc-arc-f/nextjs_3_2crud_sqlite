@@ -1,7 +1,7 @@
 //
 module.exports = {
   env: {
-    BASE_URL: "https://kuc-next-test.vercel.app",
+    BASE_URL: "http://localhost:3000",
     CSRF_SECRET : 'secret1234',
   },
 }
